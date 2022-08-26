@@ -204,8 +204,8 @@ def upload():
         y = request.form.get('y')
 
 
-        response=readImg("imaaaaaaaage.jpg",x,y)
-        figit("imaaaaaaaage.jpg")
+        response=readImg("imaaaaaaaage.jpg",x,y)# process hand and return if it is in or out of the box
+        #figit("imaaaaaaaage.jpg")
         print(response)
 
 
@@ -215,7 +215,7 @@ def upload():
             "message":"Image Uploaded"
         })
     else :
-        return jsonify({"name": f"{response}"})
+        return jsonify({"name": f"{response}"})#return the response
 
 @app.route('/result',methods=["GET","POST"])
 def nameRoute():
